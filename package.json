@@ -10,6 +10,7 @@
   "description": "blue fails at web dev",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo balls",
     "dev": "nodemon -e js,json,html,css src/index.js"
   },
@@ -22,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/wowwood/blue-site/issues"
   },
-  "homepage": "https://github.com/wowwood/blue-site#readme"
+  "homepage": "https://github.com/wowwood/blue-site#readme",
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }

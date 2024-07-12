@@ -3,10 +3,13 @@
 {% from "govuk/components/header/macro.njk" import govukHeader %}
 {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 {% from "govuk/components/footer/macro.njk" import govukFooter %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/exit-this-page/macro.njk" import govukExitThisPage %}
+
 
 {% block pageTitle %}whatthe.blue{% endblock %}
 
-
+{% block headIcons %}
 <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -15,7 +18,7 @@
 <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#0000ff">
-
+{% endblock %}
 
 
 {% block head %}
@@ -23,11 +26,21 @@
   <link rel="stylesheet" href="/style.css">
 {% endblock %}
 
+
+
 {% block header %}
   {% include "bloo-logo.html" %}
 {% endblock %}
 
 {% block content %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Beta"
+  },
+  html: 'This website is still in development'
+}) }}
+</br>
   <h1 class="govuk-heading-xl">Hi! I'm Wren Blue. 💙✨</h1>
   {{ govukWarningText({
     text: "You can be issued a penalty if you do not read this page.",
@@ -44,7 +57,9 @@
   }) }}
 
 
-  
+ 
+
+{{ govukExitThisPage() }}
 {% endblock %}
 
 {% block footer %}

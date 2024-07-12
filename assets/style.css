@@ -2,3 +2,83 @@
     border-bottom: 11px solid #0000ff;
 
 }
+
+.right {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+  }
+
+
+.moj-badge {
+    font-family: arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    padding: 0 5px;
+    display: inline-block;
+    border: 2px solid #1d70b8;
+    color: #1d70b8;
+    text-transform: uppercase;
+    vertical-align: middle;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+}
+
+.moj-badge--purple {
+    border-color: #4c2c92;
+    color: #4c2c92;
+  }
+  .moj-badge--bright-purple {
+    border-color: #912b88;
+    color: #912b88;
+  }
+  .moj-badge--red {
+    border-color: #d4351c;
+    color: #d4351c;
+  }
+  .moj-badge--green {
+    border-color: #00703c;
+    color: #00703c;
+  }
+  .moj-badge--blue {
+    border-color: #1d70b8;
+    color: #1d70b8;
+  }
+  .moj-badge--black {
+    border-color: #0b0c0c;
+    color: #0b0c0c;
+  }
+  .moj-badge--grey {
+    border-color: #505a5f;
+    color: #505a5f;
+  }
+  .moj-badge--large {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.1428571429;
+  }
+
+
+  .govuk-button--bloo {
+    background-color: #bbd4ea;
+    box-shadow: 0 2px 0 #929191;
+}
+
+.govuk-button--bloo:active, .govuk-button--bloo:hover, .govuk-button--bloo:link, .govuk-button--bloo:visited {
+    color: #0c2d4a;
+    text-decoration: none;
+}
+
+
+.govuk-padding-bottom--less-5 {
+    padding-bottom: -25px!important;
+}
+.govuk-padding-top--less-5 {
+    padding-top: -25px!important;
+}

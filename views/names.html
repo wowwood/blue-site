@@ -54,43 +54,6 @@
         <div class="govuk-grid-column-two-thirds">
           <h1 class="govuk-heading-xl">Hi! I'm Blue. 💙✨</br>
             {{govukTag({text: "They/Them", classes: "govuk-tag--turquoise"})}} {{govukTag({text: "She/Her", classes: "govuk-tag--pink"})}} {{govukTag({text: "🏳️‍⚧️🏳️‍🌈", classes: "govuk-tag--grey"})}}</h1>
-          <p class="govuk-body-l">I'm a UK based freelancer across a multitide of skillsets, including content production and publication, event management, and consultancy.</p>
-          <p class="govuk-body">This website has a few things I've done lately, plus a place for my projects.</p>
-          <p class="govuk-body">I run <a href="https://RORSAT.com" target="_blank" class="govuk-link govuk-link--no-visited-state">RORSAT</a>, which provides bespoke hardware and software solutions to the event industry. I'm also a trustee of the <a href="https://mobilephonemuseum.com" target="_blank" class="govuk-link govuk-link--no-visited-state">Mobile Phone Museum</a>, a charity dedicated to preserving their history.</p>
-
-          <h2 class="govuk-heading-m">Contact me</h2>
-  {{ govukTable({
-    captionClasses: "govuk-table__caption--l",
-    firstCellIsHeader: true,
-
-    rows: [
-      [
-        {
-          text: "Email"
-        },
-        {
-          html: "<a href=\"mailto:blue@whatthe.blue\" target=\"_blank\" class=\"govuk-link govuk-link--no-visited-state\">blue@whatthe.blue</a>"
-        }
-      ],
-      [
-        {
-          text: "LinkedIn"
-        },
-        {
-          html: "<a href=\"https://linkedin.com/in/ww-uk\" target=\"_blank\" class=\"govuk-link govuk-link--no-visited-state\">linkedin.com/in/ww-uk</a>"
-        }
-      ],
-      [
-        {
-          text: "Fediverse"
-        },
-        {
-          html: "<a rel=\"me\" href=\"https://glauca.space/@blue\" target=\"_blank\" class=\"govuk-link govuk-link--no-visited-state\">@blue@glauca.space</a>"
-        }
-      ]
-    ]
-  }) }}
-        </div>
         <div class="govuk-grid-column-one-third govuk-!-text-align-right">
           {{ govukButton({
             text: "BlueAuth 🔐",
@@ -107,24 +70,6 @@
       </div>
     </main>
   </div>
-
-  
-
-
-  {{ govukWarningText({
-    text: "You can be issued a penalty if you do not read this page.",
-    iconFallbackText: "Warning"
-  }) }}
-
-
-  {{ govukPasswordInput({
-    label: {
-      text: "gib me your secrets"
-    },
-    id: "password-input",
-    name: "password"
-  }) }}
-
 {% endblock %}
 
 {% block footer %}

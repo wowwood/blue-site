@@ -114,11 +114,28 @@
 }
 
 .col-wren {
-    color: #f47738
+    color: #CD4B0A /* meets WCAG AA */
+}
+
+.col-wren--title {
+    color: #f47738 /* meets WCAG AA for LARGE TEXT ONLY*/
 }
 
 .col-services {
     color: #505a5f
+}
+
+/*pronoun colours from tags*/
+
+.col-pronoun-they {
+    background-color: #d4ecea;
+    color: #10403c; 
+    
+}
+
+.col-pronoun-she {
+    background-color: #f9e1ec;
+    color: #6b1c40;
 }
 
 /* fonts */

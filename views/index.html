@@ -25,11 +25,11 @@
 
 {% block headIcons %}
 <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#0000ff">
 {% endblock %}
@@ -43,6 +43,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+  </style>
 {% endblock %}
 
 
@@ -54,7 +57,7 @@
 
 
 {% block content %}
-<h1 class="govuk-heading-xl">Hi, I'm <a class="col-bloo">Blue</a> / <a class="col-wren">Wren</a>! <a class="emoji">💙✨</a></br>
+<h1 class="govuk-heading-xl">Hi, I'm <a class="col-bloo">Blue</a> / <a class="col-wren--title">Wren</a>! <a class="emoji">💙✨</a></br>
   {{govukTag({text: "They/Them", classes: "govuk-tag--turquoise"})}} {{govukTag({text: "She/Her", classes: "govuk-tag--pink"})}} {{govukTag({text: "🏳️‍⚧️🏳️‍🌈", classes: "govuk-tag--grey emoji"})}} {{govukTag({text: "🇬🇧", classes: "govuk-tag--light-blue emoji"})}}</h1>
 
   <div class="govuk-width-container">

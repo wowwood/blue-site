@@ -12,6 +12,8 @@
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
 
 
 <!--moj frontend-->
@@ -43,33 +45,53 @@
 
 <!--whatthe.blue header -->
 {% block header %}
-  {% include "bloo-logo.html" %}
+  {% include "bloo-header.html" %}
 {% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "/"
+}) }}
+{% endblock %}
+
 
 {% block content %}
 
-  <div class="govuk-width-container">
-    <main class="govuk-main-wrapper">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-xl">Hi! I'm Blue. 💙✨</br>
-            {{govukTag({text: "They/Them", classes: "govuk-tag--turquoise"})}} {{govukTag({text: "She/Her", classes: "govuk-tag--pink"})}} {{govukTag({text: "🏳️‍⚧️🏳️‍🌈", classes: "govuk-tag--grey"})}}</h1>
-        <div class="govuk-grid-column-one-third govuk-!-text-align-right">
-          {{ govukButton({
-            text: "BlueAuth 🔐",
-            href: "https://sso.whatthe.blue",
-            classes: "govuk-button--secondary"
-          }) }}
-<br>
-          {{ govukButton({
-            text: "Meds 💊",
-            href: "https://meds.whatthe.blue",
-            classes: "govuk-button--secondary"
-          }) }}
-        </div>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">About</h1>
       </div>
-    </main>
-  </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">🪪</h2>
+        <p class="govuk-body-l">I go by either <a class="govuk-!-font-weight-bold col-bloo">Blue</a> or <a class="govuk-!-font-weight-bold col-wren">Wren</a>, depending on the context.</p>
+        <p class="govuk-body">My nickname is <a class="col-bloo">Blue</a>, but in most professional situations I go by Wren. I use both interchangably, and I'll be obvious when you need to use a specific one. As to the origins, <a class="col-bloo">Blue</a> (as a nickname) fell out of the first festival season I ever worked.</p>
+      </br>
+      <!--
+      <h2 class="govuk-heading-l">🌍</h2>
+        <p class="govuk-body-l">This is a lead paragraph inside a two-thirds wide column</p>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </br>
+      <h2 class="govuk-heading-l">Two-thirds column</h2>
+        <p class="govuk-body-l">This is a lead paragraph inside a two-thirds wide column</p>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </br>
+      <h2 class="govuk-heading-l">Two-thirds column</h2>
+        <p class="govuk-body-l">This is a lead paragraph inside a two-thirds wide column</p>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </br>-->
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+        {% include "right-bar.html" %}
+      </div>
+    </div>
+  </main>
+</div>
+
 {% endblock %}
 
 {% block footer %}

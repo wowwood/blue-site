@@ -1,0 +1,29 @@
+<h3 class="govuk-heading-s col-services">Services:</h3>
+{{mojBadge({
+  text: "ONLINE",
+  classes: "moj-badge--green moj-badge--large"
+})}}
+<br>
+<br>
+    {{ govukButton({
+      id: "right-bar-auth",
+      text: "BlueAuth 🔐",
+      href: "https://sso.whatthe.blue",
+      classes: "govuk-button--secondary"
+    }) }}
+
+    <br>
+    {{ govukButton({
+      id: "right-bar-stream",
+      text: "Stream 📺",
+      href: "https://stream.whatthe.blue",
+      classes: "govuk-button--secondary"
+    }) }}
+<br>
+<!--    {{ govukButton({
+     id: "right-bar-meds",
+      text: "Meds 💊",
+      href: "https://meds.whatthe.blue",
+      classes: "govuk-button--secondary"
+  }) }} -->
+

@@ -1,15 +1,11 @@
+/* header bar colour */
+
 .govuk-header__container {
     border-bottom: 11px solid #0000ff;
 
 }
 
-.right {
-    position: absolute;
-    right: 0px;
-    padding: 10px;
-  }
-
-
+/* MoJ Badge element */
 .moj-badge {
     font-family: arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -30,55 +26,103 @@
 .moj-badge--purple {
     border-color: #4c2c92;
     color: #4c2c92;
-  }
-  .moj-badge--bright-purple {
+}
+
+.moj-badge--bright-purple {
     border-color: #912b88;
     color: #912b88;
-  }
-  .moj-badge--red {
+}
+
+.moj-badge--red {
     border-color: #d4351c;
     color: #d4351c;
-  }
-  .moj-badge--green {
+}
+
+.moj-badge--green {
     border-color: #00703c;
     color: #00703c;
-  }
-  .moj-badge--blue {
+}
+
+.moj-badge--blue {
     border-color: #1d70b8;
     color: #1d70b8;
-  }
-  .moj-badge--black {
+}
+
+.moj-badge--black {
     border-color: #0b0c0c;
     color: #0b0c0c;
-  }
-  .moj-badge--grey {
+}
+
+.moj-badge--grey {
     border-color: #505a5f;
     color: #505a5f;
-  }
-  .moj-badge--large {
+}
+
+.moj-badge--large {
     font-family: "GDS Transport", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.1428571429;
-  }
+}
 
 
-  .govuk-button--bloo {
+
+/* govuk button custom colours */
+
+.govuk-button--bloo {
     background-color: #bbd4ea;
     box-shadow: 0 2px 0 #929191;
 }
 
-.govuk-button--bloo:active, .govuk-button--bloo:hover, .govuk-button--bloo:link, .govuk-button--bloo:visited {
+.govuk-button--bloo:active,
+.govuk-button--bloo:hover,
+.govuk-button--bloo:link,
+.govuk-button--bloo:visited {
     color: #0c2d4a;
     text-decoration: none;
 }
 
 
 .govuk-padding-bottom--less-5 {
-    padding-bottom: -25px!important;
+    padding-bottom: -25px !important;
 }
+
 .govuk-padding-top--less-5 {
-    padding-top: -25px!important;
+    padding-top: -25px !important;
 }
+
+
+/* custom colours */
+
+.bloo-gov {
+    color: #1d70b8;
+}
+
+.bloo-100 {
+    color: #0000ff;
+}
+
+/* variables for global text elements - change here to change globally */
+
+.col-bloo {
+    color: #1d70b8;
+}
+
+.col-wren {
+    color: #f47738
+}
+
+.col-services {
+    color: #505a5f
+}
+
+/* fonts */
+
+.emoji {
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

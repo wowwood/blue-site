@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
   })
 })
 
-app.get('/names', (req, res) => {
-  res.render('names.html', {
+app.get('/me', (req, res) => {
+  res.render('me.html', {
   })
 })
 

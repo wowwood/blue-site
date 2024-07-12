@@ -64,7 +64,12 @@
           <p class="govuk-body-l">I'm a UK based freelancer across a multitide of skillsets, including content production and publication, event management, and consultancy.</p>
           <p class="govuk-body">This website has a few things I've done lately, plus a place for my projects.</p>
           <p class="govuk-body">I run <a href="https://RORSAT.com" target="_blank" class="govuk-link govuk-link--no-visited-state">RORSAT</a>, which provides bespoke hardware and software solutions to the event industry. I'm also a trustee of the <a href="https://mobilephonemuseum.com" target="_blank" class="govuk-link govuk-link--no-visited-state">Mobile Phone Museum</a>, a charity dedicated to preserving their history.</p>
-  
+          {{ govukButton({
+            text: "More about me",
+            isStartButton: false,
+            href: "/me"
+          }) }}
+
           {{ govukTable({
     caption: "Contact me",
     captionClasses: "govuk-table__caption--m",
@@ -98,10 +103,10 @@
     ]
   }) }}
 
-  {{ govukButton({
-    text: "More about me",
-    href: "/me"
+  {{ govukInsetText({
+    html: "<a href=\"/public_key.asc\" target=\"_blank\" class=\"govuk-link govuk-link--no-visited-state\">Public PGP Key</a>"
   }) }}
+
         </div>
         <div class="govuk-grid-column-one-third govuk-!-text-align-right">
           {% include "right-bar.html" %}

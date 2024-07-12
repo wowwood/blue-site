@@ -10,7 +10,8 @@
   "description": "blue fails at web dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo balls"
+    "test": "echo balls",
+    "dev": "nodemon -e js,json,html,css src/index.js"
   },
   "repository": {
     "type": "git",

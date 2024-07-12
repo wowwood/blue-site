@@ -1,0 +1,48 @@
+{% extends "govuk/template.njk" %}
+{% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+
+{% block head %}
+  <link rel="stylesheet" href="/govuk-assets/govuk/govuk-frontend.min.css">
+  <link rel="stylesheet" href="/style.css">
+{% endblock %}
+
+{% block header %}
+  {% include "bloo-logo.html" %}
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">Hi! I'm Wren Blue. 💙✨</h1>
+  {{ govukWarningText({
+    text: "You can be issued a penalty if you do not read this page.",
+    iconFallbackText: "Warning"
+  }) }}
+
+
+  {{ govukPasswordInput({
+    label: {
+      text: "gib me your secrets"
+    },
+    id: "password-input",
+    name: "password"
+  }) }}
+
+
+  
+{% endblock %}
+
+{% block footer %}
+{% include "bloo-footer.html" %}
+{% endblock %}
+
+{% block bodyEnd %}
+  {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
+  <script type="module" src="/govuk-assets/govuk/govuk-frontend.min.js"></script>
+  <script type="module">
+    import { initAll } from '/govuk-assets/govuk/govuk-frontend.min.js'
+    initAll()
+  </script>
+{% endblock %}

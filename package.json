@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "govuk-frontend": "^5.4.0",
+    "nunjucks": "^3.2.4",
+    "sass": "^1.77.8"
+  },
+  "name": "whatthe.blue",
+  "version": "1.0.0",
+  "description": "blue fails at web dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo balls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wowwood/blue-site.git"
+  },
+  "author": "bloo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wowwood/blue-site/issues"
+  },
+  "homepage": "https://github.com/wowwood/blue-site#readme"
+}

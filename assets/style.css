@@ -93,6 +93,9 @@
     padding-top: -25px !important;
 }
 
+.govuk-link:link, .govuk-link--no-visited-state:link, .govuk-link--no-visited-state:visited {
+    color: #B05E58;
+}
 
 /* custom colours */
 
@@ -107,7 +110,7 @@
 /* variables for global text elements - change here to change globally */
 
 .col-bloo {
-    color: #1d70b8;
+    color: #1976d2;
 }
 
 .col-wren {

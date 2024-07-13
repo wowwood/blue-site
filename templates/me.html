@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <a href="/" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">About</h1>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">🪪</h2>
+        <p class="govuk-heading-m">I go by either <a class="govuk-!-font-weight-bold col-bloo">Blue</a> or <a class="govuk-!-font-weight-bold col-wren">Wren</a>, depending on the context.</p>
+        <p class="govuk-body">My nickname is <a class="col-bloo">Blue</a>, but in most professional situations I go by <a class="col-wren">Wren</a>. I use both interchangably, and I'll be obvious when you need to use a specific one. As to the origins: <a class="col-bloo">Blue</a> (as a nickname) fell out of the first festival season I ever worked (around 2018); <a class="col-wren">Wren</a> is my $GovernmentName and I like that too!</p>
+      </br>
+
+      <h2 class="govuk-heading-l">🙋</h2>
+        <p class="govuk-heading-m">I use <a href="https://en.pronouns.page/they/them" target="_blank" class="col-pronoun-they">they/them</a> or <a href="https://en.pronouns.page/she/her" target="_blank" class="col-pronoun-she">she/her</a> pronouns.</p>
+        <p class="govuk-body">Either is okay, and don't worry about getting it wrong first time. As long as you make an effort in future, all is good 😁. I use the gender-neutral title 'Mx'.</p>
+      </br>
+            <!--
+      <h2 class="govuk-heading-l">🌍</h2>
+        <p class="govuk-body-l">This is a lead paragraph inside a two-thirds wide column</p>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </br>
+      <h2 class="govuk-heading-l">Two-thirds column</h2>
+        <p class="govuk-body-l">This is a lead paragraph inside a two-thirds wide column</p>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </br>-->
+      <p class="govuk-body-s">
+        <i>This page is inspired by <a href="https://beeps.website/about/" target="_blank" class="govuk-link">beeps</a>.</i>
+      </p>
+      </div>
+
+      <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+        {% include "right-bar.html" %}
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock content %}

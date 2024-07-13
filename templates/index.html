@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <h1 class="govuk-heading-xl">Hi, I'm <a class="col-bloo">Blue</a> / <a class="col-wren--title">Wren</a>! <a
+        class="emoji">💙✨</a></br>
+      <strong class="govuk-tag govuk-tag--turquoise">They/Them</strong> <strong
+        class="govuk-tag govuk-tag--pink">She/Her</strong> <strong
+        class="govuk-tag govuk-tag--grey emoji">🏳️‍⚧️🏳️‍🌈</strong> <strong
+        class="govuk-tag govuk-tag--light-blue emoji">🇬🇧</strong>
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body-l">I'm a UK based freelancer across a multitide of skillsets, including content production
+          and publication, event management, and consultancy.</p>
+        <p class="govuk-body">This website has a few things I've done lately, plus a place for my projects.</p>
+        <p class="govuk-body">I run <a href="https://RORSAT.com" target="_blank"
+            class="govuk-link govuk-link--no-visited-state">RORSAT</a>, which provides bespoke hardware and software
+          solutions to the event industry. I'm also a trustee of the <a href="https://mobilephonemuseum.com"
+            target="_blank" class="govuk-link govuk-link--no-visited-state">Mobile Phone Museum</a>, a charity dedicated
+          to preserving their history.</p>
+        <a class="govuk-button" data-module="govuk-button" href="/about">More about me</a>
+<br>
+          <a class="govuk-button govuk-button--warning" data-module="govuk-button"
+          href="/posts">Posts</a>
+
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Contact me</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-smol"></th>
+              <th scope="col" class="govuk-table__header govuk-!-width-smol"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Email</th>
+              <td class="govuk-table__cell"><i class="fa-solid fa-envelope"></i></td>
+              <td class="govuk-table__cell"><a href="mailto:blue@whatthe.blue" target="_blank"
+                  class="govuk-link govuk-link--no-visited-state">blue@whatthe.blue</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">LinkedIn</th>
+              <td class="govuk-table__cell"><i class="fa-brands fa-linkedin"></i></td>
+              <td class="govuk-table__cell"><a href="https://linkedin.com/in/ww-uk" target="_blank"
+                  class="govuk-link govuk-link--no-visited-state">linkedin.com/in/ww-uk</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Fediverse</th>
+              <td class="govuk-table__cell"><i class="fa-brands fa-mastodon"></i></td>
+              <td class="govuk-table__cell"><a rel="me" href="https://glauca.space/@blue" target="_blank"
+                  class="govuk-link govuk-link--no-visited-state">@blue@glauca.space</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Signal</th>
+              <td class="govuk-table__cell"><i class="fa-brands fa-signal-messenger"></i></td>
+              <td class="govuk-table__cell"><a
+                  href="https://signal.me/#eu/MDqUW8HTRwTFBfvQ297i4tCbmlUkoemxxn3ZvSkTJARJEjc9Qz9IJ7sno5RgKyMB"
+                  target="_blank" class="govuk-link govuk-link--no-visited-state">@blue.94</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="govuk-inset-text">
+          <i class="fa-solid fa-key"></i> <a href="/public_key.asc" target="_blank"
+            class="govuk-link govuk-link--no-visited-state">Public PGP Key</a>
+        </div>
+        </div>
+        <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+          {% include "right-bar.html" %}
+        </div>
+      </div>
+
+  </main>
+
+
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      You can be issued a penalty if you do not read this page.
+    </strong>
+  </div>
+
+  <div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+    <label class="govuk-label" for="password-input">
+      gib me your secrets
+    </label>
+    <div class="govuk-input__wrapper govuk-password-input__wrapper">
+      <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input"
+        name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+      <button type="button"
+        class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle"
+        data-module="govuk-button" aria-controls="password-input" aria-label="Show password" hidden>
+        Show
+      </button>
+    </div>
+  </div>
+
+  {% endblock %}

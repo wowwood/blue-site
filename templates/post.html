@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+    </ol>
+  </div>
+  <br>
+  <main class="govuk-main-wrapper bloo-grid-wrap">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl"><span class="col-bloo">Blue</span>'s Posts</h1>
+</div>
+    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
+    {% for page in section.pages %}
+    <a href="{{ page.permalink | safe }}">
+      <div class="govuk-grid-column-one-third">
+        <h1 class="govuk-heading-xl">{{ page.title }}</h1>
+      </div>
+    </a>
+    {% endfor %}
+
+  </main>
+</div>
+
+
+
+{% endblock content %}

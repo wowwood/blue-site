@@ -1,0 +1,97 @@
+
+<!--govuk frontend-->
+{% extends "govuk/template.njk" %}
+{% from "govuk/components/password-input/macro.njk" import govukPasswordInput %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/exit-this-page/macro.njk" import govukExitThisPage %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+
+<!--moj frontend-->
+{%- from "moj/components/badge/macro.njk" import mojBadge -%}
+
+
+
+
+
+{% block pageTitle %}whatthe.blue{% endblock %}
+
+{% block headIcons %}
+<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#0000ff">
+{% endblock %}
+
+<!-- head - css-->
+{% block head %}
+  <link rel="stylesheet" href="/govuk-assets/govuk/govuk-frontend.min.css">
+  <link rel="stylesheet" href="/style.css">
+{% endblock %}
+
+
+<!--whatthe.blue header -->
+{% block header %}
+  {% include "bloo-header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "/"
+    }
+  ]
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<h1 class="govuk-heading-xl"><a class=col-bloo>Blue</a>'s Posts</h1>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h1 class="govuk-heading-xl"><a href="/posts/post-1" class="govuk-link">post-1</a></h1>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h1 class="govuk-heading-xl">headingxl</h1>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h1 class="govuk-heading-xl">headingxl</h1>
+      </div>
+    </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "bloo-footer.html" %}
+{% endblock %}
+
+{% block bodyEnd %}
+  {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
+  <script type="module" src="/govuk-assets/govuk/govuk-frontend.min.js"></script>
+  <script type="module">
+    import { initAll } from '/govuk-assets/govuk/govuk-frontend.min.js'
+    initAll()
+  </script>
+{% endblock %}

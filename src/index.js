@@ -25,7 +25,16 @@ app.get('/me', (req, res) => {
   })
 })
 
+app.get('/posts', (req, res) => {
+  res.render('posts.html', {
+  })
+})
+
+app.get('/posts/post-1', (req, res) => {
+  res.render('posts/post-1.html', {
+  })
+})
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Bloo is on the interwebs - use port ${port}`)
 })

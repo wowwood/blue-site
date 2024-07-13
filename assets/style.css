@@ -97,6 +97,10 @@
     color: #B05E58;
 }
 
+.govuk-\!-width-smol {
+    width: 10%!important;
+}
+
 /* custom colours */
 
 .bloo-gov {

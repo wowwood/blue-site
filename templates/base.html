@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="govuk-template">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,7 @@
   <script src="/govuk-frontend.min.js"></script>
   <link rel="stylesheet" href="/govuk-frontend.min.css">
 
-  <!-- head - astro-->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
-  <script type="module"
-    src="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"></script>
-
+ 
   <!-- head - custom css -->
   <link rel="stylesheet" href="/style.css">
 
@@ -48,7 +41,10 @@
 
 
 <body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="{{ current_path | replace(from='/', to="") | urlencode }}">
-  
+  {% if page.extra %}<div class="class-banner class-banner--{{ page.extra.class | replace(from=" ",to="-") }}">{{page.extra.class | upper }}</div>
+  {% else %}<div class="class-banner class-banner--unclassified">UNCLASSIFIED</div>
+  {% endif %}
+
   {% include "bloo-header.html" %}
   <section class="section">
     <div class="container">

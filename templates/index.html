@@ -3,13 +3,14 @@
 {% block content %}
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
-    <h1 class="govuk-heading-xl">Hi, I'm <a class="col-bloo">Blue</a> / <a class="col-wren--title">Wren</a>! <a
-        class="emoji">💙✨</a></br>
-      <strong class="govuk-tag govuk-tag--turquoise">They/Them</strong> <strong
-        class="govuk-tag govuk-tag--pink">She/Her</strong> <strong
-        class="govuk-tag govuk-tag--grey emoji">🏳️‍⚧️🏳️‍🌈</strong> <strong
-        class="govuk-tag govuk-tag--light-blue emoji">🇬🇧</strong>
-    </h1>
+    <h1 class="govuk-heading-xl header-index">Hi, I'm <span class="col-bloo">Blue</span> / <span
+        class="col-wren--title">Wren</span>! <span class="emoji">💙&nbsp;✨</span></h1>
+    <div class="tags-index">
+      <span class="govuk-tag govuk-tag--turquoise">They/Them</span> <span
+        class="govuk-tag govuk-tag--pink">She/Her</span> <span
+        class="govuk-tag govuk-tag--grey emoji">🏳️‍⚧️&nbsp;🏳️‍🌈</span> <span
+        class="govuk-tag govuk-tag--light-blue emoji">🇬🇧</span>
+    </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <p class="govuk-body-l">I'm a UK based freelancer across a multitide of skillsets, including content production
@@ -21,9 +22,8 @@
             target="_blank" class="govuk-link govuk-link--no-visited-state">Mobile Phone Museum</a>, a charity dedicated
           to preserving their history.</p>
         <a class="govuk-button" data-module="govuk-button" href="/about">More about me</a>
-<br>
-          <a class="govuk-button govuk-button--warning" data-module="govuk-button"
-          href="/posts">Posts</a>
+        <br>
+        <a class="govuk-button govuk-button--warning" data-module="govuk-button" href="/posts">Posts</a>
 
 
         <table class="govuk-table">
@@ -68,11 +68,11 @@
           <i class="fa-solid fa-key"></i> <a href="/public_key.asc" target="_blank"
             class="govuk-link govuk-link--no-visited-state">Public PGP Key</a>
         </div>
-        </div>
-        <div class="govuk-grid-column-one-third govuk-!-text-align-right">
-          {% include "right-bar.html" %}
-        </div>
       </div>
+      <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+        {% include "right-bar.html" %}
+      </div>
+    </div>
 
   </main>
 

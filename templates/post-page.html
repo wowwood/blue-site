@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="{ page.extra | json_encode() }"></div>
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">

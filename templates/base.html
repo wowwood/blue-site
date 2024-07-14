@@ -47,7 +47,8 @@
 
 
 
-<body class="govuk-template__body js-enabled govuk-frontend-supported">
+<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="{{ current_path | replace(from='/', to="") | urlencode }}">
+  
   {% include "bloo-header.html" %}
   <section class="section">
     <div class="container">

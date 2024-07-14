@@ -1,0 +1,23 @@
+:root {
+    --rainbow: linear-gradient(
+      45deg,
+      #e40303 0% 10%,
+      #ff8c00 10% 20%,
+      #ffed00 20% 30%,
+      #008026 30% 40%,
+      #0044ff 40% 50%,
+      #750787 50% 60%,
+      #ffffff 60% 70%,
+      #ffafc8 70% 80%,
+      #74d7ee 80% 90%,
+      #613915 90% 100%
+    );
+    --trans: linear-gradient(
+     90deg,
+      #74d7ee 0% 20%,
+      #ffafc8 20% 40%,
+      #ffffff 40% 60%,
+      #ffafc8 60% 80%,
+      #74d7ee 80% 100%
+    );
+  }

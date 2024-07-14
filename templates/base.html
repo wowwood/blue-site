@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--favicon-->
   <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -17,13 +18,23 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- head - css-->
+  <!-- head - importing govuk frontend-->
 
   <script src="/govuk-frontend.min.js"></script>
   <link rel="stylesheet" href="/govuk-frontend.min.css">
+
+  <!-- head - astro-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
+  <script type="module"
+    src="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"></script>
+
+  <!-- head - custom css -->
   <link rel="stylesheet" href="/style.css">
 
-<!-- emoji font -->
+  <!-- emoji font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
@@ -44,19 +55,19 @@
     </div>
   </section>
   {% include "bloo-footer.html" %}
-  
+
   {# Run JavaScript at end of the body, to avoid blocking the initial render. #}
-    <script type="module" src="/govuk-frontend.min.js"></script>
-    <script type="module">
-      import { initAll } from '/govuk-frontend.min.js'
-      initAll()
-    </script>
+  <script type="module" src="/govuk-frontend.min.js"></script>
+  <script type="module">
+    import { initAll } from '/govuk-frontend.min.js'
+    initAll()
+  </script>
 </body>
 
 
 
 
- 
+
 
 
 </html>

@@ -77,6 +77,41 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 }
 
 
+/* colourchange.js stying */
+
+@-webkit-keyframes colourchange {
+  0% {
+    background-color: #0b0c0c ;
+   
+  }
+
+  5% {
+    background-color: red;
+   
+  }
+
+  33% {
+    background-color: blue;
+
+  }
+
+  67% {
+    background-color: green;
+
+  }
+
+  95% {
+    background-color: red;
+
+  }
+
+  0% {
+    background-color: #0b0c0;
+   
+  }
+}
+
+
 /* page grid wrap */
 
 .bloo-grid-wrap {

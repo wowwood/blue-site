@@ -271,11 +271,11 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 }
 
 .col-wren {
-  color: var(--col-wren); /* meets WCAG AA */
+  color: var(--col-wren); /* meets WCAG AA (on light theme)*/
 }
 
 .col-wren--title {
-  color: #f47738; /* meets WCAG AA for LARGE TEXT ONLY*/
+  color: #f47738; /* meets WCAG AA for LARGE TEXT ONLY (on light theme)*/
 }
 
 .col-services {

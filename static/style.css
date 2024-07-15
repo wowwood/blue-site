@@ -72,6 +72,10 @@ body[data-page="postsfirst"] .govuk-header__container::before {
   background: var(--trans);
 }
 
+body[data-page="--not-found--"] .govuk-header__container::before {
+  background: #d4351c;
+}
+
 
 /* page grid wrap */
 
@@ -191,6 +195,13 @@ body[data-page="postsfirst"] .govuk-header__container::before {
 
 .govuk-\!-width-smol {
   width: 10% !important;
+}
+
+/* govuk notif banner custom colour */
+
+.govuk-notification-banner--error {
+  border-color: #d4351c;
+  background-color: #d4351c;
 }
 
 /* custom colours */

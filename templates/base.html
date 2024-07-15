@@ -39,8 +39,18 @@
 </head>
 
 
+<!-- outputting the current path to data-page, if no path defined, make it --not-found-- to fix error 
+ 
+Error: Failed to serve the site
+Error: Failed to render '404.html' (error happened in 'base.html').
+Error: Reason: Variable `current_path` not found in context while rendering '404.html'
 
-<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="{{ current_path | replace(from='/', to="") | urlencode }}">
+-->
+{% if current_path is defined == true %}<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="{{ current_path | replace(from='/', to="") | urlencode }}">
+{% else %}<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="--not-found--"></body>
+{% endif %}
+
+<!-- pulling in class banner variable from page extra-->
   {% if page.extra %}<div class="class-banner class-banner--{{ page.extra.class | replace(from=" ",to="-") }}">{{page.extra.class | upper }}</div>
   {% else %}<div class="class-banner class-banner--unclassified">UNCLASSIFIED</div>
   {% endif %}

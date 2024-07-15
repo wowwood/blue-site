@@ -6,6 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
+     # - name: commit_ref_to_footer TOdo finish 
+      #  uses: https://docs.github.com/en/actions/learn-github-actions/variables#passing-values-between-steps-and-jobs-in-a-workflow
+    #https://docs.github.com/en/actions/learn-github-actions/variables#passing-values-between-steps-and-jobs-in-a-workflow
+       # env: 
+          # gets commit
+          # GITHUB_REF_NAME
+
+
       - name: checkout
         uses: actions/checkout@v4
       - name: build_and_deploy

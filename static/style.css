@@ -81,6 +81,7 @@ body[data-page="postsfirst"] .govuk-header__container::before {
 }
 
 
+/* spacing for header and tags on index page*/
 
 .header-index {
  margin-bottom: 20px;
@@ -95,6 +96,12 @@ body[data-page="postsfirst"] .govuk-header__container::before {
 .tags-index span {
   margin-right: 8px;
 
+}
+
+/* align images */
+
+.img-right {
+  
 }
 
 /* MoJ Badge element */

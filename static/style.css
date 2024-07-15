@@ -119,6 +119,14 @@ body[data-page="--not-found--"] .govuk-header__container::before {
   flex-wrap: wrap;
 }
 
+.govuk-heading-l--less-bottom {
+  margin-bottom: 8px;
+}
+
+.govuk-caption-m--less-bottom {
+  margin-bottom: 4px;
+}
+
 
 /* spacing for header and tags on index page*/
 
@@ -226,6 +234,13 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 .govuk-link--no-visited-state:link,
 .govuk-link--no-visited-state:visited {
   color: #b05e58;
+}
+
+.no-underline:link,
+.no-underline:visited,
+.gno-underline:hover,
+.no-underline:active{
+  text-decoration: none;
 }
 
 .govuk-\!-width-smol {

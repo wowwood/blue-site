@@ -98,12 +98,6 @@ body[data-page="postsfirst"] .govuk-header__container::before {
 
 }
 
-/* align images */
-
-.img-right {
-  
-}
-
 /* MoJ Badge element */
 .moj-badge {
   font-family: arial, sans-serif;

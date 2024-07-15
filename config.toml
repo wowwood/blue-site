@@ -7,6 +7,15 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# When set to "true", the generated HTML files are minified.
+minify_html = false
+
+# The default author for pages
+author = "Blue"
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = false
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -14,3 +23,5 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+

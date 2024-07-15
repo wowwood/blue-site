@@ -18,25 +18,22 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- head - importing govuk frontend-->
-
-  <script src="/govuk-frontend.min.js"></script>
+  <!-- head - importing govuk frontend css (script at bottom) -->
   <link rel="stylesheet" href="/govuk-frontend.min.css">
 
  
   <!-- head - custom css -->
   <link rel="stylesheet" href="/style.css">
 
-  <!-- head - colour change script -->
-  <script src="/colourchange.js"></script>
-
-  <!-- emoji font -->
+<!-- google fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Noto Colour Emoji font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
-  </style>
+    <!-- Noto B/W Emoji font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+
   <meta charset="utf-8">
   <title>whatthe.blue</title>
 </head>
@@ -66,12 +63,17 @@ Error: Reason: Variable `current_path` not found in context while rendering '404
   </section>
   {% include "bloo-footer.html" %}
 
-  {# Run JavaScript at end of the body, to avoid blocking the initial render. #}
+    <!-- last thing - custom scripts -->
+
+  <!--Run JavaScript at end of the body, to avoid blocking the initial render. -->
   <script type="module" src="/govuk-frontend.min.js"></script>
   <script type="module">
     import { initAll } from '/govuk-frontend.min.js'
     initAll()
   </script>
+
+<script src="/dark-light-theme.js"></script>
+<script src="/colourchange.js"></script>
 </body>
 
 

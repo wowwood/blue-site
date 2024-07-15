@@ -1,55 +1,122 @@
 @import "flags.css";
+@import "class-banner.css";
+@import "moj-badge.css";
 
-/* banners */
-
-.class-banner {
-    text-transform: uppercase;
-    font-size: 16px ;
-    line-height: 1;
-    text-align: center;
-    padding: 6px 0;
-    font-weight: bold;
-    font-family: 'Helvetica Neue', sans-serif;
-    letter-spacing: 1px;
+:root {
+  --grey: #b1b4b6;
+  --col-std-header: #0000ff;
+  --col-header: #0b0c0c;
+  --col-error: #d4351c;
+  --col-bloo: #1976d2;
 }
 
-.class-banner--not-set {
-    background-color: #616161;
-    color: white;
+[data-theme="light"] {
+  --invert-img: 0;
+  --col-content-bg: #fff;
+  --col-footer-bg: #f3f2f1;
+  --col-text: #0b0c0c;
+  --col-link: #b05e58;
+  --col-wren: #cd4b0a;
+  --col-input-bg: #fff;
+  --col-input-bord: #0b0c0c;
+  --moj-badge-bg: ;
+  --col-serv-r-bar: #505a5f;
 }
 
-.class-banner--unclassified {
-    background-color: #007a33;
-    color: white;
+[data-theme="dark"] {
+  --invert-img: 1;
+  --col-content-bg: #1e1f21;
+  --col-footer-bg: #323232;
+  --col-text: #fff;
+  --col-link: #db7d76;
+  --col-wren: #f47738;
+  --col-input-bg: var(--grey);
+  --col-input-bord: #fff;
+  --moj-badge-bg: #fff;
+  --col-serv-r-bar: var(--grey);
 }
 
-.class-banner--controlled {
-    background-color: #502b85;
-    color: white;
+/* defining elements affected by light/dark mode */
+
+/* text */
+
+/* wildcards */
+*[class^="govuk-body"],
+*[class^="govuk-heading-"],
+*[class^="govuk-footer"],
+*[class^="govuk-table"],
+*[class^="govuk-back-link"],
+*[class^="govuk-breadcrumbs"] {
+  color: var(--col-text);
 }
 
-.class-banner--conf {
-    background-color: #0033a0;
-    color: white;
+*[class^="govuk-caption"] {
+  color: var(--grey);
 }
 
-.class-banner--s {
-    background-color: #c8102e;
-    color: white;
+/* specific classes */
+
+.govuk-label,
+.govuk-footer__link
+.govuk-footer__link:active,
+.govuk-footer__link:hover,
+.govuk-footer__link:link,
+.govuk-footer__link:visited,
+.govuk-back-link,
+.govuk-back-link:active,
+.govuk-back-link:hover,
+.govuk-back-link:visited,
+.govuk-back-link:link,
+.govuk-breadcrumbs__link,
+.govuk-breadcrumbs__link:active,
+.govuk-breadcrumbs__link:hover,
+.govuk-breadcrumbs__link:link,
+.govuk-breadcrumbs__link:visited,
+.govuk-inset-text {
+  color: var(--col-text);
 }
 
-.class-banner--top-secret {
-    background-color: #ff8c00	;
-    color: black;
+/* backgrounds */
+
+.govuk-template {
+  background-color: var(--col-footer-bg);
 }
 
-.class-banner--ts-sci {
-    background-color: #fce83a;
-    color: black;
+.govuk-template__body,
+.container {
+  background-color: var(--col-content-bg);
 }
 
+.govuk-footer {
+  border-top: 1px solid var(--grey);
+  background: var(--col-footer-bg);
+}
+
+/* specific tweaks */
+
+/* warning text */
+.govuk-warning-text__icon {
+  border: 3px solid var(--col-text);
+  color: var(--col-content-bg); /* colour of glyph inside circle */
+  background: var(--col-text);
+}
+
+.govuk-warning-text__text {
+  color: var(--col-text);
+}
 
 /* header bar colour */
+
+.govuk-header {
+  /* getting rid of the solid border at bottom, so it can be filled by bgcolor*/
+  border-bottom-width: 10px;
+  border-bottom: 10px solid var(--col-content-bg);
+  background: var(--col-header);
+}
+
+.govuk-header__container {
+  border-bottom: 10px solid;
+}
 
 .govuk-header__container::before {
   pointer-events: none;
@@ -61,7 +128,7 @@
   display: block;
   position: absolute;
   margin-top: 0px;
-  background: #0000ff;
+  background: var(--col-std-header);
 }
 
 body[data-page="about"] .govuk-header__container::before {
@@ -73,7 +140,13 @@ body[data-page="postsfirst"] .govuk-header__container::before {
 }
 
 body[data-page="--not-found--"] .govuk-header__container::before {
-  background: #d4351c;
+  background: var(--col-error);
+}
+
+/* moj badge bg change*/
+
+.moj-badge {
+  background-color: var(--moj-badge-bg);
 }
 
 
@@ -81,36 +154,29 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 
 @-webkit-keyframes colourchange {
   0% {
-    background-color: #0b0c0c ;
-   
+    background-color: var(--col-header);
   }
 
   5% {
     background-color: red;
-   
   }
 
   33% {
     background-color: blue;
-
   }
 
   67% {
     background-color: green;
-
   }
 
   95% {
     background-color: red;
-
   }
 
   0% {
-    background-color: #0b0c0;
-   
+    background-color: var(--col-header);
   }
 }
-
 
 /* page grid wrap */
 
@@ -127,84 +193,18 @@ body[data-page="--not-found--"] .govuk-header__container::before {
   margin-bottom: 4px;
 }
 
-
 /* spacing for header and tags on index page*/
 
 .header-index {
- margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
 
 .tags-index {
-    margin-bottom: 60px;
-
+  margin-bottom: 60px;
 }
 
 .tags-index span {
   margin-right: 8px;
-
-}
-
-/* MoJ Badge element */
-.moj-badge {
-  font-family: arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.25;
-  padding: 0 5px;
-  display: inline-block;
-  border: 2px solid #1d70b8;
-  color: #1d70b8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-}
-
-.moj-badge--purple {
-  border-color: #4c2c92;
-  color: #4c2c92;
-}
-
-.moj-badge--bright-purple {
-  border-color: #912b88;
-  color: #912b88;
-}
-
-.moj-badge--red {
-  border-color: #d4351c;
-  color: #d4351c;
-}
-
-.moj-badge--green {
-  border-color: #00703c;
-  color: #00703c;
-}
-
-.moj-badge--blue {
-  border-color: #1d70b8;
-  color: #1d70b8;
-}
-
-.moj-badge--black {
-  border-color: #0b0c0c;
-  color: #0b0c0c;
-}
-
-.moj-badge--grey {
-  border-color: #505a5f;
-  color: #505a5f;
-}
-
-.moj-badge--large {
-  font-family: arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.1428571429;
 }
 
 /* govuk button custom colours */
@@ -233,13 +233,13 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 .govuk-link:link,
 .govuk-link--no-visited-state:link,
 .govuk-link--no-visited-state:visited {
-  color: #b05e58;
+  color: var(--col-link);
 }
 
 .no-underline:link,
 .no-underline:visited,
 .gno-underline:hover,
-.no-underline:active{
+.no-underline:active {
   text-decoration: none;
 }
 
@@ -250,8 +250,8 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 /* govuk notif banner custom colour */
 
 .govuk-notification-banner--error {
-  border-color: #d4351c;
-  background-color: #d4351c;
+  border-color: var(--col-error);
+  background-color: var(--col-error);
 }
 
 /* custom colours */
@@ -267,11 +267,11 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 /* variables for global text elements - change here to change globally */
 
 .col-bloo {
-  color: #1976d2;
+  color: var(--col-bloo);
 }
 
 .col-wren {
-  color: #cd4b0a; /* meets WCAG AA */
+  color: var(--col-wren); /* meets WCAG AA */
 }
 
 .col-wren--title {
@@ -279,7 +279,7 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 }
 
 .col-services {
-  color: #505a5f;
+  color: var(--col-serv-r-bar);
 }
 
 /*pronoun colours from tags*/
@@ -296,8 +296,52 @@ body[data-page="--not-found--"] .govuk-header__container::before {
 
 /* fonts */
 
-.emoji {
+.noto-emoji-col {
   font-family: "Noto Color Emoji", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+
+.noto-emoji-light {
+font-family: "Noto Emoji", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+}
+
+.noto-emoji-regular {
+font-family: "Noto Emoji", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+
+.noto-emoji-medium {
+  font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.noto-emoji-semibold {
+  font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.noto-emoji-bold {
+  font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* invert image on dark mode */
+
+.img-invert {
+  -webkit-filter: invert(var(--invert-img));
+  filter: invert(var(--invert-img));
 }

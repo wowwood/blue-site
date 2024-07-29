@@ -21,7 +21,7 @@ jobs:
           with: 
             path: templates/commit.html
             write-mode: overwrite
-            contents: ${{ github.sha }}
+            contents: ${{ github.sha | slice(end=7) }}
 
 
         - name: build_and_deploy

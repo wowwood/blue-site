@@ -15,16 +15,14 @@ jobs:
         - name: checkout
           uses: actions/checkout@v4
 
-        - name: Declare some variables
+        - name: passing_commit_sha_short
           shell: bash
           run: |
            echo "sha_short=$(git rev-parse --short "$GITHUB_SHA")" >> "$GITHUB_ENV"
-           echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> "$GITHUB_ENV"
   
-        - name: Another step
-          run: |
-           echo "Branch: ${{ env.branch }}"
-           echo "Sha: ${{ env.sha_short }}"
+       # - name: Another step
+        #  run: |
+         #  echo "Sha: $ {{ env.sha_short }}"
 
         - name: write_commit
           uses: DamianReeves/write-file-action@v1.3

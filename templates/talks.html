@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="/" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Talks</h1>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <!--    <p class="govuk-body-l">I enjoy giving talks and presentations - here's a few highlights:</p>
+      </br>-->
+        <span class="govuk-caption-xl">May 2024</span>
+        <h2 class="govuk-heading-l">Adventures with Iridium</h2>
+        <p class="govuk-heading-m">Electromagnetic Field 2024 - Eastnor, UK</p>
+        <p class="govuk-body">How do you transmit data when there’s 205,000 people trying to access the same mobile
+          network in a field? Satellites, of course! After facing dilemmas of tracking the staff shuttles at a major UK
+          festival, we decided to look at other options and discovered some cheap Iridium satellite constellation
+          hardware on eBay.<br><br> When they arrived, we surveyed what we had purchased, discovered it was ex-Ministry
+          of Defense hardware, and hasn’t been scrubbed properly. After getting a new pair of trousers and making the
+          relevant disclosures, we worked to reverse engineer the hardware and get some usable data transmitting into
+          space (and back down).</p>
+        </br>
+        <span class="govuk-caption-xl">March 2024</span>
+        <h2 class="govuk-heading-l">Mobile Phones and Media</h2>
+        <p class="govuk-heading-m">Cloud Native Media #13 - London UK</p>
+        <p class="govuk-body">The mobile phone has completely changed the media landscape - I take CNM on a walk through
+          history, stopping at key devices and milestones along the way.</p>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Click to watch
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <style>
+              .embed-container {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
+              }
+
+              .embed-container iframe,
+              .embed-container object,
+              .embed-container embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+            </style>
+            <div class='embed-container'><iframe src='https://www.youtube.com/embed/BG9RaeOyxMk' frameborder='0'
+                allowfullscreen></iframe></div>
+          </div>
+        </details>
+
+        </br>
+        <span class="govuk-caption-xl">March 2022</span>
+        <h2 class="govuk-heading-l">The Brick to the Foldable</h2>
+        <p class="govuk-heading-m">MIPI Alliance Member Meeting #62 - Lisbon, Portugal</p>
+        <p class="govuk-body">Being the opening presentation of the meeting, I spoke to MIPI members about milestones in
+          mobile phone history, from the brick phone in the 1980s, to foldables in the present day. This prompted lively
+          discussions and stoked interest in the Mobile Phone Museum project.</p>
+        </br>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+        {% include "right-bar.html" %}
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock content %}

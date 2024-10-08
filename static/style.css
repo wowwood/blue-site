@@ -127,7 +127,7 @@
   height: 10px;
   display: block;
   position: absolute;
-  margin-top: 0px;
+  margin-top: -0.1px;
   background: var(--col-std-header);
 }
 

@@ -1,7 +1,7 @@
 +++
 title = "The Bucket List of Songs"
 date = 2024-09-22
-extra = { class = "top secret", linecolour = "rainbow" }
+extra = { class = "controlled", linecolour = "rainbow" }
 +++
 
 One thing I've often had an affliction for is a bucket list dictated by songs. What does that mean exactly? Well, it's quite simple. Some songs are named after places or things to do...so I always try to find a way to combine the two.

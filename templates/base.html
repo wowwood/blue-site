@@ -19,9 +19,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- head - importing govuk frontend css (script at bottom) -->
-  <!-- <link rel="stylesheet" href="/govuk-frontend.min.css"> -->
 
-  <!-- govuk theme v5 - not making the same mistake - keeping this static so can just update version number -->
+  <!-- govuk theme - just update files and version number - no modifications to these files -->
   <link rel="stylesheet" href="/release-v5.12.0/govuk-frontend-5.12.0.min.css">
  
   <!-- head - custom css -->
@@ -41,13 +40,7 @@
 </head>
 
 
-<!-- outputting the current path to data-page, if no path defined, make it --not-found-- to fix error 
- 
-Error: Failed to serve the site
-Error: Failed to render '404.html' (error happened in 'base.html').
-Error: Reason: Variable `current_path` not found in context while rendering '404.html'
-
--->
+<!-- outputting the current path to data-page, if no path defined, make it --not-found---->
 {% if current_path is defined == true %}<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="{{ current_path | replace(from='/', to="") | urlencode }}" onload="statusFetch();">
 {% else %}<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="--not-found--"onload="statusFetch();"></body>
 {% endif %}
@@ -73,15 +66,6 @@ Error: Reason: Variable `current_path` not found in context while rendering '404
 
   <!--Run JavaScript at end of the body, to avoid blocking the initial render. -->
 
-
-  <!-- old govuk design system implementation - new is below
-  
-  <script type="module" src="/govuk-frontend.min.js"></script>
-  <script type="module">
-   // import { initAll } from '/govuk-frontend.min.js'
-    // initAll()
-  </script> -->
-
 <!-- init govuk -->
 <script type="module" src="/release-v5.12.0/govuk-frontend-5.12.0.min.js"></script>
     <script type="module">
@@ -90,7 +74,6 @@ Error: Reason: Variable `current_path` not found in context while rendering '404
     </script>
 
 <script src="/dark-light-theme.js"></script>
-<script src="/colourchange.js"></script>
 </body>
 
 

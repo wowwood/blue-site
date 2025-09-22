@@ -8,6 +8,7 @@
   --col-header: #0b0c0c;
   --col-error: #d4351c;
   --col-bloo: #1976d2;
+  --bgptools: #700;
 }
 
 [data-theme="light"] {
@@ -82,7 +83,7 @@
   background-color: var(--col-footer-bg);
 }
 
-.govuk-template__body,
+.govuk-template--rebranded,
 .container {
   background-color: var(--col-content-bg);
 }
@@ -91,6 +92,8 @@
   border-top: 1px solid var(--grey);
   background: var(--col-footer-bg);
 }
+
+
 
 /* specific tweaks */
 
@@ -105,78 +108,36 @@
   color: var(--col-text);
 }
 
-/* header bar colour */
+/* header things 
+adjust below to adjust header colour */
 
-.govuk-header {
-  /* getting rid of the solid border at bottom, so it can be filled by bgcolor*/
-  border-bottom-width: 10px;
-  border-bottom: 10px solid var(--col-content-bg);
-  background: var(--col-header);
+.govuk-template--rebranded .govuk-header {
+    background: #000 !important;
 }
 
-.govuk-header__container {
-  border-bottom: 10px solid;
+.govuk-template--rebranded .govuk-header__link--homepage {
+    background-color: inherit !important;
 }
 
-.govuk-header__container::before {
-  pointer-events: none;
-  content: "";
-  top: 100%;
-  left: 0;
-  width: 100%;
+/* testing flare header
+.header-flare {
   height: 10px;
-  display: block;
-  position: absolute;
-  margin-top: -0.1px;
-  background: var(--col-std-header);
+  background: var(--rainbow)
 }
+  */
 
-body[data-page="about"] .govuk-header__container::before {
+/* the extra ✨flare✨ */
+
+body[data-page="about"] .header-flare {
+    height: 10px;
   background: var(--rainbow);
 }
 
-body[data-page="postsfirst"] .govuk-header__container::before {
+body[data-page="talks"] .header-flare {
+    height: 10px;
   background: var(--trans);
 }
 
-body[data-page="--not-found--"] .govuk-header__container::before {
-  background: var(--col-error);
-}
-
-/* moj badge bg change*/
-
-.moj-badge {
-  background-color: var(--moj-badge-bg);
-}
-
-
-/* colourchange.js stying */
-
-@-webkit-keyframes colourchange {
-  0% {
-    background-color: var(--col-header);
-  }
-
-  5% {
-    background-color: red;
-  }
-
-  33% {
-    background-color: blue;
-  }
-
-  67% {
-    background-color: green;
-  }
-
-  95% {
-    background-color: red;
-  }
-
-  0% {
-    background-color: var(--col-header);
-  }
-}
 
 /* page grid wrap */
 

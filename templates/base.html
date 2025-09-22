@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template">
+<html lang="en" class="govuk-template--rebranded">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,28 +19,10 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- head - importing govuk frontend css (script at bottom) -->
-  <link rel="stylesheet" href="/govuk-frontend.min.css">
+  <!-- <link rel="stylesheet" href="/govuk-frontend.min.css"> -->
 
-  <!-- head - importing calendar module -->
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
-    <script>
-
-var calendar = new Calendar(calendarEl, {
-  plugins: [dayGridPlugin, iCalendarPlugin],
-  events: {
-    url: 'https://mywebsite/icalendar-feed.ics',
-    format: 'ics'
-  }
-})
-      document.addEventListener('DOMContentLoaded', function() {
-        const calendarEl = document.getElementById('calendar')
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-        })
-        calendar.render()
-      })
-
-    </script>
+  <!-- govuk theme v5 - not making the same mistake - keeping this static so can just update version number -->
+  <link rel="stylesheet" href="/release-v5.12.0/govuk-frontend-5.12.0.min.css">
  
   <!-- head - custom css -->
   <link rel="stylesheet" href="/style.css">
@@ -70,6 +52,9 @@ Error: Reason: Variable `current_path` not found in context while rendering '404
 {% else %}<body class="govuk-template__body js-enabled govuk-frontend-supported" data-page="--not-found--"onload="statusFetch();"></body>
 {% endif %}
 
+<!-- enabling govuk design system -->
+<script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
 <!-- pulling in class banner variable from page extra-->
   {% if page.extra %}<div class="class-banner class-banner--{{ page.extra.class | replace(from=" ",to="-") }}">{{page.extra.class | upper }}</div>
   {% else %}<div class="class-banner class-banner--unclassified">UNCLASSIFIED</div>
@@ -87,11 +72,22 @@ Error: Reason: Variable `current_path` not found in context while rendering '404
     <!-- last thing - custom scripts -->
 
   <!--Run JavaScript at end of the body, to avoid blocking the initial render. -->
+
+
+  <!-- old govuk design system implementation - new is below
+  
   <script type="module" src="/govuk-frontend.min.js"></script>
   <script type="module">
-    import { initAll } from '/govuk-frontend.min.js'
-    initAll()
-  </script>
+   // import { initAll } from '/govuk-frontend.min.js'
+    // initAll()
+  </script> -->
+
+<!-- init govuk -->
+<script type="module" src="/release-v5.12.0/govuk-frontend-5.12.0.min.js"></script>
+    <script type="module">
+      import { initAll } from '/release-v5.12.0/govuk-frontend-5.12.0.min.js'
+      initAll()
+    </script>
 
 <script src="/dark-light-theme.js"></script>
 <script src="/colourchange.js"></script>

@@ -19,7 +19,7 @@
     {% for page in section.pages %}
     <div class="govuk-grid-column-one-third">
       <p class="govuk-caption-m govuk-caption-m--less-bottom">{{ page.date }}</p>
-        <a class="no-underline" href="{{ page.permalink | safe }}">
+        <a class="no-underline govuk-link" href="{{ page.permalink | safe }}">
         <h2 class="govuk-heading-l govuk-heading-l--less-bottom">{{ page.title }}</h2>
       </a>
         <p class="govuk-body">{{ page.description }}</p>

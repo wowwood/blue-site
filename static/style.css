@@ -8,6 +8,7 @@
   --col-error: #d4351c;
   --col-bloo: #1976d2;
   --bgptools: #700;
+  --col-wren: #f47738;
 }
 
 [data-theme="light"] {
@@ -19,7 +20,6 @@
   --col-wren: #cd4b0a;
   --col-input-bg: #fff;
   --col-input-bord: #0b0c0c;
-  --moj-badge-bg: ;
   --col-serv-r-bar: #505a5f;
 }
 
@@ -32,7 +32,6 @@
   --col-wren: #f47738;
   --col-input-bg: var(--grey);
   --col-input-bord: #fff;
-  --moj-badge-bg: #fff;
   --col-serv-r-bar: var(--grey);
 }
 
@@ -78,8 +77,9 @@
 
 /* backgrounds */
 
-.govuk-template {
-  background-color: var(--col-footer-bg);
+.govuk-template
+.govuk-template__body {
+  background-color: var(--col-footer-bg) !important;
 }
 
 .govuk-template--rebranded,
@@ -88,13 +88,13 @@
 }
 
 .govuk-footer {
-  border-top: 1px solid var(--grey);
-  background: var(--col-footer-bg);
+  background: var(--col-footer-bg) !important;
+  border-top: 0px;
 }
 
 
-
 /* specific tweaks */
+
 
 /* warning text */
 .govuk-warning-text__icon {
@@ -107,7 +107,7 @@
   color: var(--col-text);
 }
 
-/* header things 
+/* header thinks 
 adjust below to adjust header colour */
 
 .govuk-template--rebranded .govuk-header {
@@ -118,23 +118,11 @@ adjust below to adjust header colour */
     background-color: inherit !important;
 }
 
-/* testing flare header
-.header-flare {
-  height: 10px;
-  background: var(--rainbow)
-}
-  */
+/* the extra ✨flare✨ at the bottom of the page */
 
-/* the extra ✨flare✨ */
-
-body[data-page="about"] .header-flare {
-    height: 10px;
+.footer-bar {
+      height: 10px;
   background: var(--rainbow);
-}
-
-body[data-page="talks"] .header-flare {
-    height: 10px;
-  background: var(--trans);
 }
 
 

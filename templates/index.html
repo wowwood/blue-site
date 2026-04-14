@@ -1,94 +1,189 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
-    <h1 class="govuk-heading-xl header-index">Hi, I'm <span class="col-bloo">Blue</span> / <span
-        class="col-wren--title">Wren</span>! <span class="noto-emoji-col">💙✨</span></h1>
+    <h1 class="govuk-heading-xl header-index">
+      Hi, I'm <span class="col-bloo">Blue</span> /
+      <span class="col-wren--title">Wren</span>!
+      <span class="noto-emoji-col">💙✨</span>
+    </h1>
     <div class="tags-index">
       <span class="govuk-tag govuk-tag--pink">She/Her</span>
-      <span class="govuk-tag govuk-tag--turquoise">They/Them</span> <span
-        class="govuk-tag govuk-tag--grey noto-emoji-col">🏳️‍⚧️&nbsp;🏳️‍🌈</span> <span
-        class="govuk-tag govuk-tag--light-blue noto-emoji-col">🇬🇧</span>
+      <span class="govuk-tag govuk-tag--turquoise">They/Them</span>
+      <span class="govuk-tag govuk-tag--grey noto-emoji-col">🏳️‍⚧️&nbsp;🏳️‍🌈</span>
+      <span class="govuk-tag govuk-tag--light-blue noto-emoji-col">🇬🇧</span>
     </div>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body-l">I'm a freelance broadcast engineer based in London, UK. I have a multitide of skillsets,
-          including broadcast, content production
-          and event management.</p>
-        <p class="govuk-body">This website has a few things I've done lately, plus a place for my projects.</p>
-        <p class="govuk-body">I run <a href="https://RORSAT.com" target="_blank"
-            class="govuk-link govuk-link--no-visited-state">RORSAT</a>, which provides bespoke hardware and software
-          solutions to the event industry. I'm a trustee of the <a href="https://mobilephonemuseum.com" target="_blank"
-            class="govuk-link govuk-link--no-visited-state">Mobile Phone Museum</a>, a charity dedicated
-          to preserving their history.</p>
-        <p class="govuk-body">I'm also a Manager at Large of <a href="https://www.smpte.org/sections/united-kingdom"
-            class="govuk-link govuk-link--no-visited-state">SMPTE UK</a>, the standards body for the broadcast industry.</p>
+        <p class="govuk-body-l">
+          I'm a freelance broadcast engineer based in London, UK. I have a
+          multitide of skillsets, including broadcast, content production and
+          event management.
+        </p>
+        <p class="govuk-body">
+          This website has a few things I've done lately, plus a place for my
+          projects.
+        </p>
+        <p class="govuk-body">
+          I run
+          <a
+            href="https://RORSAT.com"
+            target="_blank"
+            class="govuk-link govuk-link--no-visited-state"
+            >RORSAT</a
+          >, which provides bespoke hardware and software solutions to the event
+          industry. I'm a trustee of the
+          <a
+            href="https://mobilephonemuseum.com"
+            target="_blank"
+            class="govuk-link govuk-link--no-visited-state"
+            >Mobile Phone Museum</a
+          >, a charity dedicated to preserving their history.
+        </p>
+        <p class="govuk-body">
+          I'm also a Manager at Large of
+          <a
+            href="https://www.smpte.org/sections/united-kingdom"
+            class="govuk-link govuk-link--no-visited-state"
+            >SMPTE UK</a
+          >, the standards body for the broadcast industry.
+        </p>
 
-        <a class="govuk-button" data-module="govuk-button" href="/about">More about me</a>
-        <br>
-        <a class="govuk-button govuk-button--warning" data-module="govuk-button" href="/posts">Posts</a>
-        <br>
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/talks">
+        <a class="govuk-button" data-module="govuk-button" href="/about"
+          >More about me</a
+        >
+        <br />
+        <a
+          class="govuk-button govuk-button--warning"
+          data-module="govuk-button"
+          href="/posts"
+          >Posts</a
+        >
+        <br />
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="/talks"
+        >
           Talks
+        </a>
+        <br />
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="/bio"
+        >
+          Bio
         </a>
 
         <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Contact me</caption>
+          <caption class="govuk-table__caption govuk-table__caption--m">
+            Contact me
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-!-width-smol"></th>
-              <th scope="col" class="govuk-table__header govuk-!-width-smol"></th>
+              <th
+                scope="col"
+                class="govuk-table__header govuk-!-width-smol"
+              ></th>
+              <th
+                scope="col"
+                class="govuk-table__header govuk-!-width-smol"
+              ></th>
               <th scope="col" class="govuk-table__header"></th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Email</th>
-              <td class="govuk-table__cell"><i class="fa-solid fa-envelope"></i></td>
-              <td class="govuk-table__cell"><a href="mailto:blue@whatthe.blue" target="_blank"
-                  class="govuk-link govuk-link--no-visited-state">blue@whatthe.blue</a></td>
+              <td class="govuk-table__cell">
+                <i class="fa-solid fa-envelope"></i>
+              </td>
+              <td class="govuk-table__cell">
+                <a
+                  href="mailto:blue@whatthe.blue"
+                  target="_blank"
+                  class="govuk-link govuk-link--no-visited-state"
+                  >blue@whatthe.blue</a
+                >
+              </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">LinkedIn</th>
-              <td class="govuk-table__cell"><i class="fa-brands fa-linkedin"></i></td>
-              <td class="govuk-table__cell"><a href="https://linkedin.com/in/ww-uk" target="_blank"
-                  class="govuk-link govuk-link--no-visited-state">in/ww-uk</a></td>
+              <td class="govuk-table__cell">
+                <i class="fa-brands fa-linkedin"></i>
+              </td>
+              <td class="govuk-table__cell">
+                <a
+                  href="https://linkedin.com/in/ww-uk"
+                  target="_blank"
+                  class="govuk-link govuk-link--no-visited-state"
+                  >in/ww-uk</a
+                >
+              </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Fediverse</th>
-              <td class="govuk-table__cell"><i class="fa-brands fa-mastodon"></i></td>
-              <td class="govuk-table__cell"><a rel="me" href="https://glauca.space/@blue" target="_blank"
-                  class="govuk-link govuk-link--no-visited-state">@blue@glauca.space</a></td>
+              <td class="govuk-table__cell">
+                <i class="fa-brands fa-mastodon"></i>
+              </td>
+              <td class="govuk-table__cell">
+                <a
+                  rel="me"
+                  href="https://glauca.space/@blue"
+                  target="_blank"
+                  class="govuk-link govuk-link--no-visited-state"
+                  >@blue@glauca.space</a
+                >
+              </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Signal</th>
-              <td class="govuk-table__cell"><i class="fa-brands fa-signal-messenger"></i></td>
-              <td class="govuk-table__cell"><a
+              <td class="govuk-table__cell">
+                <i class="fa-brands fa-signal-messenger"></i>
+              </td>
+              <td class="govuk-table__cell">
+                <a
                   href="https://signal.me/#eu/MDqUW8HTRwTFBfvQ297i4tCbmlUkoemxxn3ZvSkTJARJEjc9Qz9IJ7sno5RgKyMB"
-                  target="_blank" class="govuk-link govuk-link--no-visited-state">@blue.94</a></td>
+                  target="_blank"
+                  class="govuk-link govuk-link--no-visited-state"
+                  >@blue.94</a
+                >
+              </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">GitHub</th>
-              <td class="govuk-table__cell"><i class="fa-brands fa-github"></i></td>
-              <td class="govuk-table__cell"><a href="https://github.com/wowwood" target="_blank"
-                  class="govuk-link govuk-link--no-visited-state">@wowwood</a></td>
+              <td class="govuk-table__cell">
+                <i class="fa-brands fa-github"></i>
+              </td>
+              <td class="govuk-table__cell">
+                <a
+                  href="https://github.com/wowwood"
+                  target="_blank"
+                  class="govuk-link govuk-link--no-visited-state"
+                  >@wowwood</a
+                >
+              </td>
             </tr>
           </tbody>
         </table>
 
         <div class="govuk-inset-text">
-          <i class="fa-solid fa-key"></i> <a href="/public_key.asc" target="_blank"
-            class="govuk-link govuk-link--no-visited-state">Public PGP Key</a>
+          <i class="fa-solid fa-key"></i>
+          <a
+            href="/public_key.asc"
+            target="_blank"
+            class="govuk-link govuk-link--no-visited-state"
+            >Public PGP Key</a
+          >
         </div>
         <div>
           <h3 class="govuk-heading-s">RailMiles 🚂</h3>
-          <a href="//blue.railmiles.me"><img class="img-invert"
-              src="https://public.railmiles.me/signatures/e690d4e501eb3dc8f861f7560b803b12.png"></a>
+          <a href="//blue.railmiles.me"
+            ><img
+              class="img-invert"
+              src="https://public.railmiles.me/signatures/e690d4e501eb3dc8f861f7560b803b12.png"
+          /></a>
         </div>
-
-
-
       </div>
 
       <div class="govuk-grid-column-one-third govuk-!-text-align-right">
@@ -96,30 +191,55 @@
       </div>
     </div>
 
-<br>
-<div class="govuk-grid-row">
+    <br />
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-                  <h3 class="govuk-heading-s">Friends! 🫂</h3>
-    <a class="inline-flex no-underline" href="https://www.theresnotime.co.uk" target="_blank">
-      <img alt="A 88x31 website button with a fox emoji, and the text TheresNoTime"
-        src="https://www.theresnotime.co.uk/button.png" />
-    </a>
-    <a class="inline-flex" href="https://enfys.wales" target="_blank"><img loading="lazy"
-        src="https://enfys.wales/images/enfys8831.png" alt="enfys.wales button"></a>
-    <a class="inline-flex" href="//ikea.com/gb/en/p/blahaj-soft-toy-shark-30373588/" target="_blank">
-      <img src="/buttons/love_blahaj.gif" alt="Love Blåhaj"></a>
-    <a class="inline-flex" href="//glauca.digital/" target="_blank">
-      <img src="/buttons/glauca.gif" alt="Glauca Digital"></a>
-    <a class="inline-flex" href="//faelix.net/" target="_blank">
-      <img src="/buttons/faelix.png" alt="Faelix"></a>
-    <a class="inline-flex" href="//infernocomms.com/" target="_blank">
-      <img src="/buttons/infernocomms.png" alt="Inferno Comms"></a>
-    <a class="inline-flex" href="//adryd.com/" target="_blank">
-      <img src="/buttons/adryd.png" alt="adryd"></a>
-    <iframe src="//incr.easrng.net/badge?key=whatthe-blue" style="background: url(//incr.easrng.net/bg.gif)"
-      title="increment badge" width="88" height="31" frameborder="0"></iframe>
+        <h3 class="govuk-heading-s">Friends! 🫂</h3>
+        <a
+          class="inline-flex no-underline"
+          href="https://www.theresnotime.co.uk"
+          target="_blank"
+        >
+          <img
+            alt="A 88x31 website button with a fox emoji, and the text TheresNoTime"
+            src="https://www.theresnotime.co.uk/button.png"
+          />
+        </a>
+        <a class="inline-flex" href="https://enfys.wales" target="_blank"
+          ><img
+            loading="lazy"
+            src="https://enfys.wales/images/enfys8831.png"
+            alt="enfys.wales button"
+        /></a>
+        <a
+          class="inline-flex"
+          href="//ikea.com/gb/en/p/blahaj-soft-toy-shark-30373588/"
+          target="_blank"
+        >
+          <img src="/buttons/love_blahaj.gif" alt="Love Blåhaj"
+        /></a>
+        <a class="inline-flex" href="//glauca.digital/" target="_blank">
+          <img src="/buttons/glauca.gif" alt="Glauca Digital"
+        /></a>
+        <a class="inline-flex" href="//faelix.net/" target="_blank">
+          <img src="/buttons/faelix.png" alt="Faelix"
+        /></a>
+        <a class="inline-flex" href="//infernocomms.com/" target="_blank">
+          <img src="/buttons/infernocomms.png" alt="Inferno Comms"
+        /></a>
+        <a class="inline-flex" href="//adryd.com/" target="_blank">
+          <img src="/buttons/adryd.png" alt="adryd"
+        /></a>
+        <iframe
+          src="//incr.easrng.net/badge?key=whatthe-blue"
+          style="background: url(//incr.easrng.net/bg.gif)"
+          title="increment badge"
+          width="88"
+          height="31"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+  </main>
+  {% endblock %}
 </div>
-</div>
-
-</main>
-{% endblock %}

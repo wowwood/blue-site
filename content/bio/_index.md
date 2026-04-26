@@ -10,6 +10,8 @@ _Here's my professional bio, with headshot_
 
 # Wren Wood
 
+_She/Her_
+
 Broadcast engineering is often a difficult field to define, but Wren simply describes it as "making the telly go." Driven by a deep-seated passion for news, Wren excels when working under the high-stakes pressure of breaking stories, regardless of the technological challenges that may arise.
 
 Wren graduated from the University of Salford with a DipHE in Media Technology and has since applied her expertise at CBS News and IMG. Her technical proficiency spans both traditional SDI and modern IP infrastructure, making her a versatile asset in a shifting media landscape.
